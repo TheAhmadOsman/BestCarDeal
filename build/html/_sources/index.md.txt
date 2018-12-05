@@ -93,9 +93,6 @@ Unfortunately, to collect specific data, such as floods at specific counties dur
 ## Basic Exploration
 ---
 
-## Big Questions
----
-
 ## Basic Information
 ---
 We're dealing with 53 unique manufacturers, 6 unique conditions, and four car sizes plus 1834 counties and 51 states.
@@ -160,6 +157,9 @@ The graph above shows the mean prices for vehicles within each state. Persons lo
 #### Average Price per Manufacturer
 ![avgprice-manufacturer-bar](img/avgprice-manufacturer-bar.png)
 This graph shows the mean prices of vehicles for each manufacturer. Luxury vehicles such as ferrari, have a high average sales price of $80,000, followed by aston and aston-martin with average sales prices of less than $60,000. Persons looking for cheaper alternatives can look to brands such as mercury and volkswagen, who have average sales prices of less than $5,000.
+
+## Big Questions
+---
 
 ## Further Exploration
 ---

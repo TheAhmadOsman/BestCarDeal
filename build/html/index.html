@@ -1,106 +1,213 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2D2D2D" />
+  
+  <title>Craiglist Cars Visualization & Analysis :: Used Cars for Sale in the United States</title>
+  
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <link rel="icon" type="image/png" sizes="32x32" href="_static/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="_static/img/favicon-16x16.png">
+        <link rel="index" title="Index"
+              href="genindex.html"/>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Here we have our website &#8212; Craiglist Cars Visualization &amp; Analysis  documentation</title>
-    <link rel="stylesheet" href="_static/groundwork.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  <link rel="stylesheet" href="_static/css/insegel.css"/>
+
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'',
+        VERSION:'',
+        LANGUAGE:'None',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+    };
+  </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-     
-        
-    <link rel="apple-touch-icon" href="_static/""" />
-        
-    <link media="only screen and (max-device-width: 480px)" href="_static/small_groundwork.css" type= "text/css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
-    <!-- Place this tag in your head or just before your close body tag. -->
 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="#">Craiglist Cars Visualization &amp; Analysis  documentation</a> &#187;</li> 
-      </ul>
-    </div>  
+  <script src="https://email.tl.fortawesome.com/c/eJxNjUEOgyAQAF8jR7Kw6wIHDh7sP1Cw2mgxgmn6-3JsMqc5zEQfE8dkxOY1KKMUOI3ACFKRJpSW2AAp7ontYIaxI6i7XPJVwyeVfCQ550Os3jLrGSNOLgbdAy6s0PBk2TFNjEbsfq31LB0OnX407pJa5v2faRadwSW63mn5KuLyR9j2tgx3zecanl-55R_-jjPs"></script>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="here-we-have-our-website">
-<h1>Here we have our website<a class="headerlink" href="#here-we-have-our-website" title="Permalink to this headline">¶</a></h1>
-<hr class="docutils" />
-<p>Say whaaat!</p>
+</head>
+
+<body>
+  <div id="insegel-container">
+    <header>
+      <div id="logo-container">
+        <a href="#"><img src="_static/img/logo.svg"></a>
+      </div>
+      <div id="project-container">
+        <h1>Craiglist Cars Visualization & Analysis Documentation</h1>
+      </div>
+    </header>
+
+    <div id="content-container">
+
+      <div id="main-content-container">
+        <div id="main-content-header">
+          <h1>Used Cars for Sale in the United States</h1>
+        </div>
+        <div id="main-content">
+          
+  <div class="section" id="used-cars-for-sale-in-the-united-states">
+<h1>Used Cars for Sale in the United States<a class="headerlink" href="#used-cars-for-sale-in-the-united-states" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="our-motivation">
+<h2>Our Motivation<a class="headerlink" href="#our-motivation" title="Permalink to this headline">¶</a></h2>
+<p>Buying a car is never an easy task, especially when buying a used one. So many different factors go into determining the price of a vehicle that it’s difficult to accurately predict what one should be paying. Aside from this there are some parts of the country where used car sales are few and far between and the prices are not so desirable. Using our dataset of used car sales we aimed to clarify some of these unknown variables and provide an easier experience for those searching for a car. Our goal was not to simply create static visualizations that compared cars from winter 2018, but instead we aim to create an application of sorts that allows users to continuously update the vehicles in their search.</p>
 </div>
-<div class="section" id="and-we-keep-going">
-<h1>And we keep going<a class="headerlink" href="#and-we-keep-going" title="Permalink to this headline">¶</a></h1>
-<hr class="docutils" />
-<p>Naah</p>
-<div class="section" id="here-is-another-thing">
-<h2>Here is another thing<a class="headerlink" href="#here-is-another-thing" title="Permalink to this headline">¶</a></h2>
-<hr class="docutils" />
-<p>Test</p>
+<div class="section" id="the-dataset">
+<h2>The Dataset<a class="headerlink" href="#the-dataset" title="Permalink to this headline">¶</a></h2>
+<p>Our dataset contains 1.7 million used vehicle sales from Craigslist.org</p>
+<p>The columns are as follows:</p>
 <ul class="simple">
-<li>test<ul>
-<li>ttest tteast</li>
+<li><strong>url</strong> - Unique - <em>Listing URL</em></li>
+<li><strong>city</strong> - String - <em>Given Craigslist region</em></li>
+<li><strong>price</strong> - Integer - <em>Listing price</em></li>
+<li><strong>year</strong> - Integer - <em>Year of manufacturing</em></li>
+<li><strong>manufacturer</strong> - String - <em>Manufacturing company</em></li>
+<li><strong>make</strong> - String - <em>Model of vehicle</em></li>
+<li><strong>condition</strong> - String - <em>Condition of vehicle</em></li>
+<li><strong>cylinders</strong> - String - <em>Number of cylinders</em></li>
+<li><strong>fuel</strong> - String - <em>Type of fuel required</em></li>
+<li><strong>odometer</strong> - Integer - <em>Miles traveled</em></li>
+<li><strong>title_status</strong> - String - <em>Vehicle title status/existance</em></li>
+<li><strong>transmission</strong> - String - <em>Transmission of vehicle</em></li>
+<li><strong>drive</strong> - String - <em>Drive of vehicle</em></li>
+<li><strong>size</strong> - String - <em>Size of vehicle</em></li>
+<li><strong>type</strong> - String - <em>Type of vehicle</em></li>
+<li><strong>paint_color</strong> - String - <em>Color of vehicle</em></li>
+<li><strong>image_url</strong> - String - <em>Image URL</em></li>
+<li><strong>latitude</strong> - Integer - <em>Latitude of listing</em></li>
+<li><strong>longitude</strong> - Integer - <em>Longitude of listing</em></li>
+<li><strong>county_name</strong> - String - <em>Name of County in which listing is located</em></li>
+<li><strong>county_fips</strong> - Integer - <em>County of listing’s Federal Information Processing Standards code</em></li>
+<li><strong>state_code</strong> - String - <em>Name of state in which listing is located</em></li>
+<li><strong>state_name</strong> - String - <em>2 letter state abbreviation</em></li>
+<li><strong>state_fips</strong> - Integer - <em>State of listing’s Federal Information Processing Standards code</em></li>
+<li><strong>weather</strong> - Integer - <em>Average historical temperature of listing’s location between October and November</em></li>
+</ul>
+<div class="section" id="initial-creation">
+<h3>Initial Creation<a class="headerlink" href="#initial-creation" title="Permalink to this headline">¶</a></h3>
+<p>We deployed a scraper which utilized python and requestsHTML to take every used car for sale from every North American Craigslist website. Regions were located by continuously following <em>Nearby CL</em> links until no unexplored websited remained.</p>
+<a class="reference external image-reference" href="img/craigs3.png"><img alt="craigs3.png" src="_images/craigs3.png" /></a>
+<p>Following the cars+trucks link takes us to the following page.</p>
+<a class="reference external image-reference" href="img/craigs1.png"><img alt="craigs1.png" src="_images/craigs1.png" /></a>
+<p>The price and image url were pulled from the search page, while the rest of the variables were pulled from the main listing page.</p>
+<a class="reference external image-reference" href="img/craigs2.png"><img alt="craigs2.png" src="_images/craigs2.png" /></a>
+<p>Latitude/Longitude was pulled from a specific tag on the Google Maps object, and the rest were pulled from the variables below. Not all variables were listed with every vehicle, so some rows contain blank values.</p>
+<p>The program loops through every listing on the search page then continues looping through the search pages (e.g. the next button at the bottom of search results) until there are no more results. Once the end is reached the program moves on to the next untapped region and restarts this process, continuing until all regions have been explored.</p>
+</div>
+<div class="section" id="secondary-data-gathering">
+<h3>Secondary Data Gathering<a class="headerlink" href="#secondary-data-gathering" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="basic-exploration">
+<h2>Basic Exploration<a class="headerlink" href="#basic-exploration" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="big-questions">
+<h2>Big Questions<a class="headerlink" href="#big-questions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="further-exploration">
+<h2>Further Exploration<a class="headerlink" href="#further-exploration" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="flask-app">
+<h2>Flask App<a class="headerlink" href="#flask-app" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="world-happiness-index">
+<h2>World Happiness Index<a class="headerlink" href="#world-happiness-index" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="what-s-next">
+<h2>What’s Next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+        </div>
+      </div>
+
+      <div id="side-menu-container">
+
+        <div id="search" role="search">
+        <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+            <input type="text" name="q" placeholder="Search..." />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+        </form>
+</div>
+
+        <div id="side-menu" role="navigation">
+
+          
+  
+    
+  
+  
+    <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Used Cars for Sale in the United States</a><ul>
+<li><a class="reference internal" href="#our-motivation">Our Motivation</a></li>
+<li><a class="reference internal" href="#the-dataset">The Dataset</a><ul>
+<li><a class="reference internal" href="#initial-creation">Initial Creation</a></li>
+<li><a class="reference internal" href="#secondary-data-gathering">Secondary Data Gathering</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#basic-exploration">Basic Exploration</a></li>
+<li><a class="reference internal" href="#big-questions">Big Questions</a></li>
+<li><a class="reference internal" href="#further-exploration">Further Exploration</a></li>
+<li><a class="reference internal" href="#flask-app">Flask App</a></li>
+<li><a class="reference internal" href="#world-happiness-index">World Happiness Index</a></li>
+<li><a class="reference internal" href="#what-s-next">What’s Next?</a></li>
 </ul>
 </li>
 </ul>
-<div class="section" id="hi">
-<h3>Hi!<a class="headerlink" href="#hi" title="Permalink to this headline">¶</a></h3>
 </div>
-</div>
-</div>
+  
 
 
-          </div>
         </div>
+
+        
+
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><h3>Related Topics</h3>
-<ul>
-  <li><a href="#">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-<div id="searchbox" style="display: none" role="search">
-  <!--<h3>Search</h3>-->
-    <form class="search" action="search.html" method="get">
-      <div id="search_input"><input type="text" name="q" placeholder="Search"/></div>
-      <!--<div id="search_go"><input type="submit" value="Go" /></div>-->
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
+
+    </div>
+
+<footer>
+    <div id="footer-info">
+        <ul id="build-details">
+            
+                <li class="footer-element">
+                    
+                        <a href="_sources/index.md.txt" rel="nofollow"> source</a>
+                    
+                </li>
+            
+
+            
+
+            
+        </ul>
+        <div id="credit">
+            created with <a href="http://sphinx-doc.org/">Sphinx</a> and <a href="https://github.com/Autophagy/insegel">Insegel</a>
+
+        </div>
+    </div>
+
+    <a id="menu-toggle" class="fa fa-bars" aria-hidden="true"></a>
+
+    <script type="text/javascript">
+      $("#menu-toggle").click(function() {
+        $("#menu-toggle").toggleClass("toggled");
+        $("#side-menu-container").slideToggle(300);
+      });
+    </script>
+
+</footer> 
+
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
- 
-        <div class="github_fork">
-            <a href="http://github.com/""">
-                <img style="position: fixed; top: 0; right: 0; border: 0;"
-                     src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"
-                     alt="Fork me on GitHub">
-            </a>
-        </div>
-    
 
-
-    <div class="footer">
-      &copy; Copyright 2018, Ahmad Osman, Austin Reese, and Simon Parris.
-    </div>
-  </body>
+</body>
 </html>

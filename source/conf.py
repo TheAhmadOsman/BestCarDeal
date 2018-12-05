@@ -35,7 +35,8 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.intersphinx',
               'sphinx.ext.todo',
               'sphinx.ext.githubpages',
-              'm2r'
+              'm2r',
+	      'recommonmark'
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -91,7 +92,7 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'groundwork'
+html_theme = 'insegel'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.

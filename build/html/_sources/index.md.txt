@@ -96,8 +96,116 @@ Unfortunately, to collect specific data, such as floods at specific counties dur
 ## Big Questions
 ---
 
+## Basic Information
+---
+We're dealing with 53 unique manufacturers, 6 unique conditions, and four car sizes plus 1834 counties and 51 states.
+#### USE 5 CATEGORIES TO FIND THE BEST TYPE OF CAR AVAILABLE - THEN FIND THE BEST DEAL ON A USED CAR
+
+* PRICE
+* MANUFACTURER
+* CONDITION
+* STATE
+* YEAR
+---
+
+#### The Distribution of the Top 10 Car Manufacturers
+![manufacturers-chart](img/manufacturers-chart.png)
+This is the percentage distribution of the cars being manufactured by the top 10 manufacturers.
+
+![manufacturers-bar](img/manufacturers-bar.png)
+This is the count of the cars being manufactured by the top 10 manufacturers.
+
+Here we are looking to see the distribution of the top 10 manufacturing companies within the dataset. If you prefer Ford vehicles, Ford has the highest number of vehicles available for purchase, meaning you have a large number of vehicles to choose from. They are followed by Chevrolet and Toyota.  
+
+#### The Distribution of the Top 10 States to Buy a Car in
+![states-chart](img/states-chart.png)
+This is the percentage distribution of the cars being sold in the top 10 states.
+
+![states-bar](img/states-bar.png)
+This is the count of the cars being sold in the top 10 states.
+
+Here we are looking at the top 10 distribution of cars for sale by state. States with higher populations such as California and Florida will generally have more cars for purchase than states such as Wyoming.
+
+#### Frequency Distributions for Cars' Conditions
+![conditions-frequency](img/conditions-frequency.png)
+The graph above displays the frequency distributions for cars in the dataset of a certain condition. For persons more concerned about the condition of their vehicles,they will be more likely to consider cars of a new condition, as they would have a more recent year of manufacturing(between 2015-2020). Cars in poor/salvaged condition are most likely depreciated vehicles within the timespan of years 2000-2005.
+
+* The white dot represents the median
+* The thick gray bar in the center represents the interquartile range
+* The thin gray line represents the 95% confidence interval
+* On each side of the gray line is a kernel density estimation to show the distribution shape of the data. 
+* Wider sections of the violin plot represent a higher probability that members of the population will take on the given value;
+* The skinnier sections represent a lower probability.
+
+#### Weather-Condition Correlation
+![weather-vehicle-freq](img/weather-vehicle-freq.png)
+In this graph, we are looking to see the correlations with weather and vehicle conditions, as this can another factor to consider when looking for a vehicle.
+
+#### Condition Distribution
+![condition-count-bar](img/condition-count-bar.png)
+This graph shows the number of vehicles within a specified condition. Cars in an excellent condition have the highest number with above 400,000 entries, followed by cars in good and like new condition.
+
+#### Size Distribution
+![size-count-bar](img/size-count-bar.png)
+For individuals concerned about car size, this graph shows the number of vehicles for sale within a specific size. Individuals looking for full-sized vehicles will have over 300,000 entries to look at, whereas persons looking for sub-compact cars will have the least amount of entries to look at, with entries less than 50,000 entries.
+
+#### Average Price per Condition
+![avgprice-condition-bar](img/avgprice-condition-bar.png)
+The graph above shows the mean price for each condition. New vehicles have an average sales price of above $20,000, followed by vehicles which are _like new_, with an average sales price of above $15,000. Persons looking at cheaper alternatives should look at vehicles with good to fair conditions, as they will on average have to spend less than $10,000 for a vehicle.
+
+#### Average Price per State
+![avgprice-state-bar](img/avgprice-state-bar.png)
+The graph above shows the mean prices for vehicles within each state. Persons looking for cheap vehicles, will be more likely to look at states such as District of Columbia and Delaware, as they both have a mean average of less than $7,500 for cars available for sale. Hawaii has the highest mean cost of vehicles with over $20,000.
+
+#### Average Price per Manufacturer
+![avgprice-manufacturer-bar](img/avgprice-manufacturer-bar.png)
+This graph shows the mean prices of vehicles for each manufacturer. Luxury vehicles such as ferrari, have a high average sales price of $80,000, followed by aston and aston-martin with average sales prices of less than $60,000. Persons looking for cheaper alternatives can look to brands such as mercury and volkswagen, who have average sales prices of less than $5,000.
+
 ## Further Exploration
 ---
+
+### Scatter Plots
+---
+
+#### Plotting Prices and Odometers
+
+![scatter.png](img/scatter.png)
+
+This scatter plots measures prices and odometers. We can see a clearly defined fall in price as the odometer increases. The graph, however, is quite chaotic with a plethora of outliars. A graph like this would look far better as a line plot, and the sheer amount of data in our dataset doesn't really lend itself to plotting each individual entry in a plot.
+
+### Violins
+---
+
+#### Year Distribution by Condition
+
+![yearConditionViolin.png](img/yearConditionViolin.png)
+
+The graph above displays the frequency distributions for cars in the dataset of a certain condition.
+For persons more concerned about the condition of their vehicles,they will be more likely to consider
+cars of a new condition, as they would have a more recent year of manufacturing(between 2015-2020).
+Cars in poor/salvaged condition are most likely depreciated vehicles within the timespan of years 2000-2005.
+
+* The white dot represents the median
+* The thick gray bar in the center represents the interquartile range
+* The thin gray line represents the 95% confidence interval
+* On each side of the gray line is a kernel density estimation to show the distribution shape of the data. 
+* Wider sections of the violin plot represent a higher probability that members of the population will take on the given value;
+* The skinnier sections represent a lower probability.
+
+#### Price Distribution by Condition
+
+![conditionViolins.png](img/conditionViolins.png)
+
+These violin graphs measure the correlation between the price of vehicles and their seller-assigned conditions. We can see a pretty obvious (and unsurprising) hierarchy of new, like new, excellent, good, fair, and salvage. One surprise, however, is the similarity in price between fair and salvage vehicles. This suggests that vehicles deemed "fair" on Craigslist are actually in quite poor condition and worth almost as much as a parts-only car.
+
+### Line Graphs
+---
+
+#### Mean/Median Price by Odometer
+
+![odomPriceLines.png](img/odomPriceLines.png)
+
+Here we measure the mean/median price as the odometer declines for each category of vehicle condition. We can see that the first four graphs are pretty similar (new, like new, good, and fair) with minor falls between each lesser category. Transitioning from good to fair, however, sees the price nearly bottom out. Clearly a "fair" distinction on Craigslist comes with a major decrease in vehicle quality.
 
 ### Heatmaps
 ---
@@ -112,13 +220,17 @@ This map displays the number of vehicles listed per county. Unsurprisingly, coun
 
 #### Map by Average Price
 
-![scatter.png](img/scatter.png)
-
 ![priceByCountyMap.png](img/priceByCountyMap.png)
 
 [Interactive Version Here](https://plot.ly/~reesau01/4)
 
 This map graphs the average price of vehicles by county across the United States. One striking observation is the increase in vehicle cost in rural areas. The prices of cars in states such as Idaho, North/South Dakota, and Wyoming, and rural parts of the midwest are far more expensive than those in the Eastern half of the nation. Cars on the East Coast also cost a faire amount less than those on the West Coast, with the coast of California boasting some pretty high prices.
+
+#### Map by Correlations
+
+![squareHeatmap.png](/img/squareHeatmap.png)
+
+All numeric variables' correlations are compared in this graph. Most variables aren't correlated at all, with the exception of moderate negative correlation between price and year, slight negative correlation between year and odometer, and slight positive correlation between year and price. We also see major negative correlation between weather and latitude which isn't surprising at the slightest for those who are familiar with the planet we live on.
 
 ### Quantile Tables
 ---

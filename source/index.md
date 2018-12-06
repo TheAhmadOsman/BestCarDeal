@@ -95,16 +95,16 @@ Unfortunately, to collect specific data, such as floods at specific counties dur
 
 To find the best possible deal on an used car, we must first take into consideration the general preferences of the average person looking to buy a vehicle. Therefore, in exploring the dataset, we will use 5 categories to find the best type of vehicles available for purchase, in order to find the best deals on a used car. The 5 categories include the vehicle's price, manufacturer, condition, state, and year. People who are less knowledgeable about vehicle specifications are more likely to explore these variables when buying a car. Most college students, like ourselves, will be looking for a used car with familiar manufacturers at a cheap price and in good condition. Other variables such as vehicle size will also be taken into consideration as customers will also need to consider what vehicle size is more suitable for them. 
 
+We believe that finding a good car for any individual can take a tremendous amount of research, and that it usually can take a span of a month to two, and that was one of the reasons we wanted to do our analysis on the total amount of cars being sold on Craigslist over a month. We are assuming that 1.7 million cars would be what individuals looking to choose from in any given month, and our exploration is assuming that too.
+
+We're dealing with 53 unique manufacturers, 6 unique conditions, and 4 car sizes plus 1834 counties and 51 states.
+
 To reiterate, the five factors we are focusing on are:
 * Price
 * Manufacturer
 * Condition
 * State
 * Year
-
-We believe that finding a good car for any individual can take a tremendous amount of research, and that it usually can take a span of a month to two, and that was one of the reasons we wanted to do our analysis on the total amount of cars being sold on Craigslist over a month. We are assuming that 1.7 million cars would be what individuals looking to choose from in any given month, and our exploration is assuming that too.
-
-We're dealing with 53 unique manufacturers, 6 unique conditions, and 4 car sizes plus 1834 counties and 51 states.
 
 ## Basic Exploration
 ---
@@ -277,7 +277,7 @@ With some optimization, the data can be scarped lively from Craigslist and our o
 
 Imagine a platform, updated lively, that would allow you have the top 10%/15%/25% deals populating a Google Map of a specific State/County, and not that only, but to give your insights and statistics about the car manufacturer and its popularity, whether that top deal by milage is also a top deal by state or manufacturer.
 
-We have come to the conclusion that this data have the ability to give insights about all of that and to help you make the right decision in finding yourself a car. Among the questions that we think this data can help us answer are:
+We have come to the conclusion that this data have the ability to give insights about all of that and to help you make the right decision in finding yourself a car. Among the questions that we think this data can help us answer now or in further explorations:
 * Whats a good deal on a used car?
 * What is the best deal on a used car?
 * Where should student go to purchase a car?

@@ -270,6 +270,14 @@ To help us browse the data early on (and because it's cool), we created a Flask 
 
 Lets demo this in class: Color and Price Graphs.
 
+Watch our demos with the links below!
+
+![1.webm](videos/1.webm)
+![2.webm](videos/2.webm)
+![3.webm](videos/3.webm)
+![4.webm](videos/4.webm)
+![5.webm](videos/5.webm)
+
 ## What's Next
 ---
 

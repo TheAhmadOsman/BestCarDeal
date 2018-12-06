@@ -273,7 +273,7 @@ Lets demo this in class: Color and Price Graphs.
 ## What's Next
 ---
 
-With some optimization, the data can be scarped lively from Craigslist and our other secondary sources, and then getting fed into our Flask app(this needs optimization too). What we are hoping to reach is to have a platform that would help you not only visualize data but also analyze the data and get to the specific entries of each graph/table/map you are looking at.
+With some optimization, the data can be scraped lively from Craigslist and our other secondary sources, and then getting fed into our Flask app(this needs optimization too). What we are hoping to reach is to have a platform that would help you not only visualize data but also analyze the data and get to the specific entries of each graph/table/map you are looking at.
 
 Imagine a platform, updated lively, that would allow you have the top 10%/15%/25% deals populating a Google Map of a specific State/County, and not that only, but to give your insights and statistics about the car manufacturer and its popularity, whether that top deal by milage is also a top deal by state or manufacturer.
 

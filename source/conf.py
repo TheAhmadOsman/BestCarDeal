@@ -54,7 +54,7 @@ source_suffix = ['.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'Craiglist Visualization & Analysis'
+project = 'Craigslist Visualization & Analysis'
 copyright = '2018, Ahmad Osman, Austin Reese, and Simon Parris'
 author = 'Ahmad Osman, Austin Reese, and Simon Parris'
 

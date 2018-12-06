@@ -20,7 +20,7 @@ The columns are as follows:
 * **cylinders** - String - *Number of cylinders*
 * **fuel** - String - *Type of fuel required*
 * **odometer** - Integer - *Miles traveled*
-* **title_status** - String - *Vehicle title status/existance*
+* **title_status** - String - *Vehicle title status/existence*
 * **transmission** - String - *Transmission of vehicle*
 * **drive** - String - *Drive of vehicle*
 * **size** - String - *Size of vehicle*
@@ -39,7 +39,7 @@ The columns are as follows:
 ## Initial Creation
 ---
 
-We deployed a scraper which utilized python and requestsHTML to take every used car for sale from every North American Craigslist website. Regions were located by continuously following *Nearby CL* links until no unexplored websited remained.
+We deployed a scraper which utilized python and requestsHTML to take every used car for sale from every North American Craigslist website. Regions were located by continuously following *Nearby CL* links until no unexplored website remained.
 
 ![craigs3.png](img/craigs3.png)
 
@@ -57,17 +57,17 @@ The program loops through every listing on the search page then continues loopin
 
 ## Secondary Data Gathering
 ---
-The data we have gathered so far seems very promising for exploration, however, we feel like it should be more grounded, literally. We wanted to connect each car being sold on Craiglist to a State and even a County. This would help us in our visualization and might give us some insights in our analysis.
+The data we have gathered so far seems very promising for exploration, however, we feel like it should be more grounded, literally. We wanted to connect each car being sold on Craigslist to a State and even a County. This would help us in our visualization and might give us some insights in our analysis.
 
-Before we look into how to bring the geographical data, we need to decide whether we think we should only use our initial 700,000 entries taken by the end of October, or to incorporate more recent entries from Craiglist that we were able to scrape at the beginning of November. After some thinking, we've decided that it would not hurt to merge the data we've gathered between October and November. We started with 700,000 entries of vehicles being sold by late October and expanded to 1,700,000 by early November. However, this is not going to be an easy task.
+Before we look into how to bring the geographical data, we need to decide whether we think we should only use our initial 700,000 entries taken by the end of October, or to incorporate more recent entries from Craigslist that we were able to scrape at the beginning of November. After some thinking, we've decided that it would not hurt to merge the data we've gathered between October and November. We started with 700,000 entries of vehicles being sold by late October and expanded to 1,700,000 by early November. However, this is not going to be an easy task.
 
 
 ### Merging Data
-We need to find out a way to merge the data, and to remove any duplicates that might had been on the website when we started our initial data collection and was still live on Craiglist by the time we did our second scraping. Furthermore, we did not want to keep working on the data in its CSV format, but rather use SQL for and have a Database on disk until we're done with our data collection. We decided that the data can be saved as a db format using sqlite, and that we would make URL column a primary key since it is a unique field. Having the URL as a primary key helped us merge the data we scrapped in October and November without any duplicates. Alas, we have 1.7 million vehicles in our dataset.
+We need to find out a way to merge the data, and to remove any duplicates that might had been on the website when we started our initial data collection and was still live on Craigslist by the time we did our second scraping. Furthermore, we did not want to keep working on the data in its CSV format, but rather use SQL for and have a Database on disk until we're done with our data collection. We decided that the data can be saved as a db format using sqlite, and that we would make URL column a primary key since it is a unique field. Having the URL as a primary key helped us merge the data we scrapped in October and November without any duplicates. Alas, we have 1.7 million vehicles in our dataset.
 
 
 ### Finding Geographical Information
-As we beging, we assumed that our data having longitudes and latitudes would make this quest an easy one, but such is life. First, we have to understand that our data at this point is very big, and that a simple API would not let us make 1.7 million calls, and then we have to also know that sqlite does not support concurrent tasks and would only allow one entry to be updated per database. 
+As we begin, we assumed that our data having longitudes and latitudes would make this quest an easy one, but such is life. First, we have to understand that our data at this point is very big, and that a simple API would not let us make 1.7 million calls, and then we have to also know that sqlite does not support concurrent tasks and would only allow one entry to be updated per database. 
 
 We tried searching for any database that would provide us the State and the Country given that we pass in longitude and latitude, but all our efforts were not successful. At one point, we almost gave up on this task, especially that the kind of providers we could find were either unreliable or quite expensive.
 
@@ -78,7 +78,7 @@ Fortunately, we came across a Federal website that among the data they'd provide
 * state_name
 * state_fips
 
-If you think about it, this is an awesome tool provided by the American Government, and the fact that we were able to not only collect the relative data of 1,700,000 entries but also to do that in under 2 hours is even more impresive. Long story short, we implemented a multi-threaded program that made about 15,000 requests per minute. We also had to migrate from Sqlite to PostgreSQL, since the former did not have any multi-threading support.
+If you think about it, this is an awesome tool provided by the American Government, and the fact that we were able to not only collect the relative data of 1,700,000 entries but also to do that in under 2 hours is even more impressive. Long story short, we implemented a multi-threaded program that made about 15,000 requests per minute. We also had to migrate from Sqlite to PostgreSQL, since the former did not have any multi-threading support.
 
 All in all, we were able to to get the geographical data we wanted for 1,700,000 entries, and not only to that for this huge amount of data, but to also do it within two hours, which seemed impossible when we started. We had some failed responses but that is because the sent longitudes and latitudes belonged to Canada, and this failed responses helped us get rid of any entries outside of the United States.
 
@@ -95,16 +95,16 @@ Unfortunately, to collect specific data, such as floods at specific counties dur
 
 To find the best possible deal on an used car, we must first take into consideration the general preferences of the average person looking to buy a vehicle. Therefore, in exploring the dataset, we will use 5 categories to find the best type of vehicles available for purchase, in order to find the best deals on a used car. The 5 categories include the vehicle's price, manufacturer, condition, state, and year. People who are less knowledgeable about vehicle specifications are more likely to explore these variables when buying a car. Most college students, like ourselves, will be looking for a used car with familiar manufacturers at a cheap price and in good condition. Other variables such as vehicle size will also be taken into consideration as customers will also need to consider what vehicle size is more suitable for them. 
 
+We believe that finding a good car for any individual can take a tremendous amount of research, and that it usually can take a span of a month to two, and that was one of the reasons we wanted to do our analysis on the total amount of cars being sold on Craigslist over a month. We are assuming that 1.7 million cars would be what individuals looking to choose from in any given month, and our exploration is assuming that too.
+
+We're dealing with 53 unique manufacturers, 6 unique conditions, and 4 car sizes plus 1834 counties and 51 states.
+
 To reiterate, the five factors we are focusing on are:
 * Price
 * Manufacturer
 * Condition
 * State
 * Year
-
-We believe that finding a good car for any individual can take a tremendous amount of research, and that it usually can take a span of a month to two, and that was one of the reasons we wanted to do our analysis on the total amount of cars being sold on Craiglist over a month. We are assuming that 1.7 million cars would be what individuals looking to choose from in any given month, and our exploration is assuming that too.
-
-We're dealing with 53 unique manufacturers, 6 unique conditions, and 4 car sizes plus 1834 counties and 51 states.
 
 ## Basic Exploration
 ---
@@ -115,7 +115,7 @@ This is the percentage distribution of the cars being manufactured by the top 10
 ![manufacturers-bar](img/manufacturers-bar.png)
 This is the count of the cars being manufactured by the top 10 manufacturers.
 
-Here we are looking to see the distribution of the top 10 manufacturing companies within the dataset. If you prefer Ford vehicles, Ford has the highest number of vehicles available for purchase, meaning you have a large number of vehicles to choose from, and also worry not as the laws of demand and supply will probably be in your favor. Ford is followed by Chevrolet and Yoyota. BMW has the lowest number of cars available for sale, so persons who prefer this brand may have a lower chance of finding their ideal vehicle.
+Here we are looking to see the distribution of the top 10 manufacturing companies within the dataset. If you prefer Ford vehicles, Ford has the highest number of vehicles available for purchase, meaning you have a large number of vehicles to choose from, and also worry not as the laws of demand and supply will probably be in your favor. Ford is followed by Chevrolet and Toyota. BMW has the lowest number of cars available for sale, so persons who prefer this brand may have a lower chance of finding their ideal vehicle.
 
 ### The Distribution of the Top 10 States to Buy a Car in
 ![states-chart](img/states-chart.png)
@@ -169,7 +169,7 @@ This scatter plots measures prices and odometers. We can see a clearly defined f
 ![yearConditionViolin.png](img/yearConditionViolin.png)
 
 The graph above displays the frequency distributions for cars in the dataset of a certain condition. For individuals more concerned about the condition of their vehicles, they will be more likely to consider
-cars of a new condition, as they would have a more recent year of manufacturing(between 2015-2018). Cars in poor/salvaged condition are most likely depreciated vehicles within the timespan of years 2000-2005. The graph clearly suggests that if you want a vehicle in a great condition, you should purchase a vehicle with a year of manufacturing closest to the most recent year.
+cars of a new condition, as they would have a more recent year of manufacturing(between 2015-2018). Cars in poor/salvaged condition are most likely depreciated vehicles within the range of years 2000-2005. The graph clearly suggests that if you want a vehicle in a great condition, you should purchase a vehicle with a year of manufacturing closest to the most recent year.
 
 * The white dot represents the median
 * The thick gray bar in the center represents the interquartile range
@@ -182,7 +182,7 @@ cars of a new condition, as they would have a more recent year of manufacturing(
 
 ![conditionViolins.png](img/conditionViolins.png)
 
-This violion graph measure the correlation between the price of vehicles and their seller-assigned conditions. We can see a pretty obvious (and unsurprising) hierarchy of new, like new, excellent, good, fair, and salvage. One surprise, however, is the similarity in price between fair and salvage vehicles. This suggests that vehicles deemed "fair" on Craigslist are actually in quite poor condition and worth almost as much as a parts-only car.
+This violin graph measure the correlation between the price of vehicles and their seller-assigned conditions. We can see a pretty obvious (and unsurprising) hierarchy of new, like new, excellent, good, fair, and salvage. One surprise, however, is the similarity in price between fair and salvage vehicles. This suggests that vehicles deemed "fair" on Craigslist are actually in quite poor condition and worth almost as much as a parts-only car.
 
 ### Line Graphs
 ---
@@ -215,7 +215,7 @@ In an effort to narrow our results, lets change the filter to 1990-1995. This th
 ![Toyotas Map](img/toyotas.png)
 [Interactive Version Here - Heated Map by Number of Listings - Toyotas](toyotas.html)
 
-Perhaps a totally different filter will reveal something interesting. This is a map of Toyotas only, and there's actually something to see here. Toyotas are quite prevelant in urban areas but they're nearly extinct in rural ones. We can contribute this to Toyotas reputation for building smaller, cost efficient cars which aren't quite as desirable in rural areas.
+Perhaps a totally different filter will reveal something interesting. This is a map of Toyotas only, and there's actually something to see here. Toyotas are quite prevalent in urban areas but they're nearly extinct in rural ones. We can contribute this to Toyotas reputation for building smaller, cost efficient cars which aren't quite as desirable in rural areas.
 
 
 ### Heated by Number of Listings by County
@@ -241,7 +241,7 @@ All numeric variables' correlations are compared in this graph. Most variables a
 ### Quantile Tables
 ---
 
-Lets say we're searching for a used car, but we have no idea what a fair price would be. Enter quantile tables. These tables aren't super eye-catching, but they're very practical tools for determining what we should be paying for a given car. They take two numeric values, and in this example I'll use odometer (miles the car has been driven) and price given that it's a very practical combination when searching for a decent used car. The x axis (columns) will be grouped by a range of odometers determined by percentiles. 0-10th percentile may be 0-25000 miles driven, 11-20 could be 25000-50000, etc. Once these groups are determined we slice the our dataframe into 10 seperate frames according to which category they fall under (a car with 12500 miles will be in the first group while 45000 will be in the second). Finally, we find percentiles for the prices of cars within each group. This sounds somewhat complicated but the graphs are far easier to understand and resemble simple heatmaps.
+Lets say we're searching for a used car, but we have no idea what a fair price would be. Enter quantile tables. These tables aren't super eye-catching, but they're very practical tools for determining what we should be paying for a given car. They take two numeric values, and in this example I'll use odometer (miles the car has been driven) and price given that it's a very practical combination when searching for a decent used car. The x axis (columns) will be grouped by a range of odometers determined by percentiles. 0-10th percentile may be 0-25000 miles driven, 11-20 could be 25000-50000, etc. Once these groups are determined we slice the our dataframe into 10 separate frames according to which category they fall under (a car with 12500 miles will be in the first group while 45000 will be in the second). Finally, we find percentiles for the prices of cars within each group. This sounds somewhat complicated but the graphs are far easier to understand and resemble simple heatmaps.
 
 ### Grouped by Odometer - Means of Price
 ![all.png](img/all.png)
@@ -261,19 +261,32 @@ As broke college students we are not looking for the greatest quality car, so th
 Grouped by Odometer - Means of Price - Ford Midsize Sedans in 'Good' Condition
 ![goodFordMidsizeSedan.png](img/goodFordMidsizeSedan.png)
 
-Finally, a chart specific enough to draw accurate conclusions from. This chart shows 'Good' mid-size sedans manufacturered by Ford. We now see that the car that we once thought we should try to buy for less than \$10000 should be pursued for no more than $3000. Overall these quantile tables are an excellent way to determine an asking price for a used car, they're easily automatable (as displayed in the Flask app) and also easy to build by hand.
+Finally, a chart specific enough to draw accurate conclusions from. This chart shows 'Good' mid-size sedans manufactured by Ford. We now see that the car that we once thought we should try to buy for less than \$10000 should be pursued for no more than $3000. Overall these quantile tables are an excellent way to determine an asking price for a used car, they're easily automatable (as displayed in the Flask app) and also easy to build by hand.
 
 ## Flask App
 ---
 
 To help us browse the data early on (and because it's cool), we created a Flask app which allows users to create custom graphs displaying information relevant to them. This is the first step in our goal to create something that continues to be relevant beyond its creation. The app does not require any updates in its current form, all it needs to update automatically is a new dataset which can be created using a script that scrapes Craigslist.
 
-## World Happiness Index
+Lets demo this in class: Color and Price Graphs.
+
+## What's Next
 ---
 
-We had a lot of free time so we also explored the World Happiness Report dataset and discovered that it is extremely boring.
+With some optimization, the data can be scarped lively from Craigslist and our other secondary sources, and then getting fed into our Flask app(this needs optimization too). What we are hoping to reach is to have a platform that would help you not only visualize data but also analyze the data and get to the specific entries of each graph/table/map you are looking at.
 
-## What's Next?
----
+Imagine a platform, updated lively, that would allow you have the top 10%/15%/25% deals populating a Google Map of a specific State/County, and not that only, but to give your insights and statistics about the car manufacturer and its popularity, whether that top deal by milage is also a top deal by state or manufacturer.
 
-Elon offered us $4.99 for the application and we took the deal.
+We have come to the conclusion that this data have the ability to give insights about all of that and to help you make the right decision in finding yourself a car. Among the questions that we think this data can help us answer now or in further explorations:
+* Whats a good deal on a used car?
+* What is the best deal on a used car?
+* Where should student go to purchase a car?
+* Which state has the best deals on new/used cars?
+* Where are the best deals on used cars in a specific state? (e.g Iowa)
+* Does car colour affect item frequency/sales price?
+* Does weather have an effect on conditions?
+* Does the weather have an effect on price?
+* What car year has the best condition?
+* Is price affected by manufacturer?
+* Does car size affect sales price?
+* Which state has the most expensive/least expensive cars, as well as the best condition of cars for sale?

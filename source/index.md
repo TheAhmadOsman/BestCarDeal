@@ -93,7 +93,7 @@ Unfortunately, to collect specific data, such as floods at specific counties dur
 ## Basic Exploration
 ---
 
-## Basic Information
+### Basic Information
 ---
 We're dealing with 53 unique manufacturers, 6 unique conditions, and four car sizes plus 1834 counties and 51 states.
 #### USE 5 CATEGORIES TO FIND THE BEST TYPE OF CAR AVAILABLE - THEN FIND THE BEST DEAL ON A USED CAR
@@ -123,17 +123,6 @@ This is the count of the cars being sold in the top 10 states.
 
 Here we are looking at the top 10 distribution of cars for sale by state. States with higher populations such as California and Florida will generally have more cars for purchase than states such as Wyoming.
 
-#### Frequency Distributions for Cars' Conditions
-![conditions-frequency](img/conditions-frequency.png)
-The graph above displays the frequency distributions for cars in the dataset of a certain condition. For persons more concerned about the condition of their vehicles,they will be more likely to consider cars of a new condition, as they would have a more recent year of manufacturing(between 2015-2020). Cars in poor/salvaged condition are most likely depreciated vehicles within the timespan of years 2000-2005.
-
-* The white dot represents the median
-* The thick gray bar in the center represents the interquartile range
-* The thin gray line represents the 95% confidence interval
-* On each side of the gray line is a kernel density estimation to show the distribution shape of the data. 
-* Wider sections of the violin plot represent a higher probability that members of the population will take on the given value;
-* The skinnier sections represent a lower probability.
-
 #### Weather-Condition Correlation
 ![weather-vehicle-freq](img/weather-vehicle-freq.png)
 In this graph, we are looking to see the correlations with weather and vehicle conditions, as this can another factor to consider when looking for a vehicle.
@@ -161,6 +150,8 @@ This graph shows the mean prices of vehicles for each manufacturer. Luxury vehic
 ## Big Questions
 ---
 
+**TODO**
+
 ## Further Exploration
 ---
 
@@ -171,7 +162,7 @@ This graph shows the mean prices of vehicles for each manufacturer. Luxury vehic
 
 ![scatter.png](img/scatter.png)
 
-This scatter plots measures prices and odometers. We can see a clearly defined fall in price as the odometer increases. The graph, however, is quite chaotic with a plethora of outliars. A graph like this would look far better as a line plot, and the sheer amount of data in our dataset doesn't really lend itself to plotting each individual entry in a plot.
+This scatter plots measures prices and odometers. We can see a clearly defined fall in price as the odometer increases. The graph, however, is quite chaotic with a plethora of outliers. A graph like this would look far better as a line plot, and the sheer amount of data in our dataset doesn't really lend itself to plotting each individual entry in a plot.
 
 ### Violins
 ---
@@ -210,7 +201,29 @@ Here we measure the mean/median price as the odometer declines for each category
 ### Heatmaps
 ---
 
-#### Map by Number of Listings
+#### Heated by Number of Listings - 1990-2005
+
+[Interactive Version Here](1990-2005.html)
+![1990-2005 Map](img/1990-2005.png)
+
+This map depicts car listings when they were manufactured between 1990 and 2005. This map is quite crowded and while it tells us a lot about the distribution of car listings across the United States, the 1990-2005 filter isn't very interesting.
+
+#### Heated by Number of Listings - 1990-1995
+
+[Interactive Version Here](1990-1995.html)
+![1990-1995 Map](img/1990-1995.png)
+
+In an effort to narrow our results, lets change the filter to 1990-1995. This thins the map but the distribution is still the same. It does appear that there are substantially less listings in the western United States which could suggest that rural areas have newer cars, but numbers are thinned on the east side as well so it's difficult to draw any valid conclusions.
+
+#### Heated by Number of Listings - Toyotas
+
+[Interactive Version Here](toyotas.html)
+![Toyotas Map](img/toyotas.png)
+
+Perhaps a totally different filter will reveal something interesting. This is a map of Toyotas only, and there's actually something to see here. Toyotas are quite prevelant in urban areas but they're nearly extinct in rural ones. We can contribute this to Toyotas reputation for building smaller, cost efficient cars which aren't quite as desirable in rural areas.
+
+
+#### Heated by Number of Listings by County
 
 ![carsForSaleMap.png](img/carsForSaleMap.png)
 
@@ -218,7 +231,7 @@ Here we measure the mean/median price as the odometer declines for each category
 
 This map displays the number of vehicles listed per county. Unsurprisingly, counties with high amounts of listings lie along the west/east coast, along with Flordia and metropolitan areas throughout the country (Denver, Chicago, Dallas, Minneapolis, etc.). The map also indicates that, with the exception of Denver and the west coast, the west side of the country is quite sparse when it comes to car listings. The east side of the United States contains far more sales.
 
-#### Map by Average Price
+#### Heated by Average Price by County
 
 ![priceByCountyMap.png](img/priceByCountyMap.png)
 
@@ -226,7 +239,7 @@ This map displays the number of vehicles listed per county. Unsurprisingly, coun
 
 This map graphs the average price of vehicles by county across the United States. One striking observation is the increase in vehicle cost in rural areas. The prices of cars in states such as Idaho, North/South Dakota, and Wyoming, and rural parts of the midwest are far more expensive than those in the Eastern half of the nation. Cars on the East Coast also cost a faire amount less than those on the West Coast, with the coast of California boasting some pretty high prices.
 
-#### Map by Correlations
+#### Heated by Correlations
 
 ![squareHeatmap.png](/img/squareHeatmap.png)
 
@@ -237,18 +250,22 @@ All numeric variables' correlations are compared in this graph. Most variables a
 
 Lets say we're searching for a used car, but we have no idea what a fair price would be. Enter quantile tables. These tables aren't super eye-catching, but they're very practical tools for determining what we should be paying for a given car. They take two numeric values, and in this example I'll use odometer (miles the car has been driven) and price given that it's a very practical combination when searching for a decent used car. The x axis (columns) will be grouped by a range of odometers determined by percentiles. 0-10th percentile may be 0-25000 miles driven, 11-20 could be 25000-50000, etc. Once these groups are determined we slice the our dataframe into 10 seperate frames according to which category they fall under (a car with 12500 miles will be in the first group while 45000 will be in the second). Finally, we find percentiles for the prices of cars within each group. This sounds somewhat complicated but the graphs are far easier to understand and resemble simple heatmaps.
 
+#### Grouped by Odometer - Means of Price
 ![all.png](img/all.png)
 
 Above is a graph featuring the entire dataframe, sorted by odometer with means of price. For example, lets say we wanted to purchase a car with no more than 70000 miles on it. We can check out the fourth column (46000-69295) to get an estimate on what a good price would be. The first row tells us that the top 10% of deals have an average price of \$3207, which seems very affordable yet somewhat unrealistic. It would be wise to target a top 30% deal, which would mean that our car would cost less than $10048.
 
+#### Grouped by Odometer - Means of Price - Fords
 ![fords.png](img/fords.png)
 
 The first graph is great but it's very broad and if we're looking to buy a specific car it's not going to help us very much. Above is a graph plotting the same odometer/price, only this time the data is taken from Fords only. We can see that Ford's are a little more expensive and have a tad more miles on them, but it's still not descriptive enough for us data scientists.
 
+Grouped by Odometer - Means of Price - Fords in 'Good' Condition
 ![goodFords.png](img/goodFords.png)
 
-As broke college students we are not looking for the greatest quality car, so this graph shows Fords with the 'Good' condition tag. Now we can see that a top 30% deal our ~70000 mile car shouldn't cost any more than $6000, probably a little less. But still, a Ford in good condition isn't as descriptive as we'd like as it still applies to a plethora of vehicles
+As broke college students we are not looking for the greatest quality car, so this graph shows Fords with the 'Good' condition tag. Now we can see that a top 30% deal our 70000 mile car shouldn't cost any more than $6000, probably a little less. But still, a Ford in good condition isn't as descriptive as we'd like as it still applies to a plethora of vehicles.
 
+Grouped by Odometer - Means of Price - Ford Midsize Sedans in 'Good' Condition
 ![goodFordMidsizeSedan.png](img/goodFordMidsizeSedan.png)
 
 Finally, a chart specific enough to draw accurate conclusions from. This chart shows 'Good' mid-size sedans manufacturered by Ford. We now see that the car that we once thought we should try to buy for less than \$10000 should be pursued for no more than $3000. Overall these quantile tables are an excellent way to determine an asking price for a used car, they're easily automatable (as displayed in the Flask app) and also easy to build by hand.
@@ -256,8 +273,14 @@ Finally, a chart specific enough to draw accurate conclusions from. This chart s
 ## Flask App
 ---
 
+To help us browse the data early on (and because it's cool), we created a Flask app which allows users to create custom graphs displaying information relevant to them. This is the first step in our goal to create something that continues to be relevant beyond its creation. The app does not require any updates in its current form, all it needs to update automatically is a new dataset which can be created using a script that scrapes Craigslist.
+
 ## World Happiness Index
 ---
 
+We had a lot of free time so we also explored the World Happiness Report dataset and discovered that it is extremely boring.
+
 ## What's Next?
 ---
+
+Elon offered us $4.99 for the application and we took the deal.

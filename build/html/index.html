@@ -137,12 +137,13 @@
 </div>
 <div class="section" id="basic-exploration">
 <h2>Basic Exploration<a class="headerlink" href="#basic-exploration" title="Permalink to this headline">¶</a></h2>
-</div>
 <hr class="docutils" />
 <div class="section" id="basic-information">
-<h2>Basic Information<a class="headerlink" href="#basic-information" title="Permalink to this headline">¶</a></h2>
+<h3>Basic Information<a class="headerlink" href="#basic-information" title="Permalink to this headline">¶</a></h3>
 <hr class="docutils" />
 <p>We’re dealing with 53 unique manufacturers, 6 unique conditions, and four car sizes plus 1834 counties and 51 states.</p>
+<div class="section" id="use-5-categories-to-find-the-best-type-of-car-available-then-find-the-best-deal-on-a-used-car">
+<h4>USE 5 CATEGORIES TO FIND THE BEST TYPE OF CAR AVAILABLE - THEN FIND THE BEST DEAL ON A USED CAR<a class="headerlink" href="#use-5-categories-to-find-the-best-type-of-car-available-then-find-the-best-deal-on-a-used-car" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>PRICE</li>
 <li>MANUFACTURER</li>
@@ -150,44 +151,61 @@
 <li>STATE</li>
 <li>YEAR</li>
 </ul>
+</div>
 <hr class="docutils" />
+<div class="section" id="the-distribution-of-the-top-10-car-manufacturers">
+<h4>The Distribution of the Top 10 Car Manufacturers<a class="headerlink" href="#the-distribution-of-the-top-10-car-manufacturers" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/manufacturers-chart.png"><img alt="manufacturers-chart" src="_images/manufacturers-chart.png" /></a>
 <p>This is the percentage distribution of the cars being manufactured by the top 10 manufacturers.</p>
 <a class="reference external image-reference" href="img/manufacturers-bar.png"><img alt="manufacturers-bar" src="_images/manufacturers-bar.png" /></a>
 <p>This is the count of the cars being manufactured by the top 10 manufacturers.</p>
 <p>Here we are looking to see the distribution of the top 10 manufacturing companies within the dataset. If you prefer Ford vehicles, Ford has the highest number of vehicles available for purchase, meaning you have a large number of vehicles to choose from. They are followed by Chevrolet and Toyota.</p>
+</div>
+<div class="section" id="the-distribution-of-the-top-10-states-to-buy-a-car-in">
+<h4>The Distribution of the Top 10 States to Buy a Car in<a class="headerlink" href="#the-distribution-of-the-top-10-states-to-buy-a-car-in" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/states-chart.png"><img alt="states-chart" src="_images/states-chart.png" /></a>
 <p>This is the percentage distribution of the cars being sold in the top 10 states.</p>
 <a class="reference external image-reference" href="img/states-bar.png"><img alt="states-bar" src="_images/states-bar.png" /></a>
 <p>This is the count of the cars being sold in the top 10 states.</p>
 <p>Here we are looking at the top 10 distribution of cars for sale by state. States with higher populations such as California and Florida will generally have more cars for purchase than states such as Wyoming.</p>
-<a class="reference external image-reference" href="img/conditions-frequency.png"><img alt="conditions-frequency" src="_images/conditions-frequency.png" /></a>
-<p>The graph above displays the frequency distributions for cars in the dataset of a certain condition. For persons more concerned about the condition of their vehicles,they will be more likely to consider cars of a new condition, as they would have a more recent year of manufacturing(between 2015-2020). Cars in poor/salvaged condition are most likely depreciated vehicles within the timespan of years 2000-2005.</p>
-<ul class="simple">
-<li>The white dot represents the median</li>
-<li>The thick gray bar in the center represents the interquartile range</li>
-<li>The thin gray line represents the 95% confidence interval</li>
-<li>On each side of the gray line is a kernel density estimation to show the distribution shape of the data.</li>
-<li>Wider sections of the violin plot represent a higher probability that members of the population will take on the given value;</li>
-<li>The skinnier sections represent a lower probability.</li>
-</ul>
+</div>
+<div class="section" id="weather-condition-correlation">
+<h4>Weather-Condition Correlation<a class="headerlink" href="#weather-condition-correlation" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/weather-vehicle-freq.png"><img alt="weather-vehicle-freq" src="_images/weather-vehicle-freq.png" /></a>
 <p>In this graph, we are looking to see the correlations with weather and vehicle conditions, as this can another factor to consider when looking for a vehicle.</p>
+</div>
+<div class="section" id="condition-distribution">
+<h4>Condition Distribution<a class="headerlink" href="#condition-distribution" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/condition-count-bar.png"><img alt="condition-count-bar" src="_images/condition-count-bar.png" /></a>
 <p>This graph shows the number of vehicles within a specified condition. Cars in an excellent condition have the highest number with above 400,000 entries, followed by cars in good and like new condition.</p>
+</div>
+<div class="section" id="size-distribution">
+<h4>Size Distribution<a class="headerlink" href="#size-distribution" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/size-count-bar.png"><img alt="size-count-bar" src="_images/size-count-bar.png" /></a>
 <p>For individuals concerned about car size, this graph shows the number of vehicles for sale within a specific size. Individuals looking for full-sized vehicles will have over 300,000 entries to look at, whereas persons looking for sub-compact cars will have the least amount of entries to look at, with entries less than 50,000 entries.</p>
+</div>
+<div class="section" id="average-price-per-condition">
+<h4>Average Price per Condition<a class="headerlink" href="#average-price-per-condition" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/avgprice-condition-bar.png"><img alt="avgprice-condition-bar" src="_images/avgprice-condition-bar.png" /></a>
 <p>The graph above shows the mean price for each condition. New vehicles have an average sales price of above $20,000, followed by vehicles which are <em>like new</em>, with an average sales price of above $15,000. Persons looking at cheaper alternatives should look at vehicles with good to fair conditions, as they will on average have to spend less than $10,000 for a vehicle.</p>
+</div>
+<div class="section" id="average-price-per-state">
+<h4>Average Price per State<a class="headerlink" href="#average-price-per-state" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/avgprice-state-bar.png"><img alt="avgprice-state-bar" src="_images/avgprice-state-bar.png" /></a>
 <p>The graph above shows the mean prices for vehicles within each state. Persons looking for cheap vehicles, will be more likely to look at states such as District of Columbia and Delaware, as they both have a mean average of less than $7,500 for cars available for sale. Hawaii has the highest mean cost of vehicles with over $20,000.</p>
+</div>
+<div class="section" id="average-price-per-manufacturer">
+<h4>Average Price per Manufacturer<a class="headerlink" href="#average-price-per-manufacturer" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/avgprice-manufacturer-bar.png"><img alt="avgprice-manufacturer-bar" src="_images/avgprice-manufacturer-bar.png" /></a>
 <p>This graph shows the mean prices of vehicles for each manufacturer. Luxury vehicles such as ferrari, have a high average sales price of $80,000, followed by aston and aston-martin with average sales prices of less than $60,000. Persons looking for cheaper alternatives can look to brands such as mercury and volkswagen, who have average sales prices of less than $5,000.</p>
 </div>
+</div>
+</div>
 <div class="section" id="big-questions">
 <h2>Big Questions<a class="headerlink" href="#big-questions" title="Permalink to this headline">¶</a></h2>
-</div>
 <hr class="docutils" />
+<p><strong>TODO</strong></p>
+</div>
 <div class="section" id="further-exploration">
 <h2>Further Exploration<a class="headerlink" href="#further-exploration" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
@@ -197,7 +215,7 @@
 <div class="section" id="plotting-prices-and-odometers">
 <h4>Plotting Prices and Odometers<a class="headerlink" href="#plotting-prices-and-odometers" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/scatter.png"><img alt="scatter.png" src="_images/scatter.png" /></a>
-<p>This scatter plots measures prices and odometers. We can see a clearly defined fall in price as the odometer increases. The graph, however, is quite chaotic with a plethora of outliars. A graph like this would look far better as a line plot, and the sheer amount of data in our dataset doesn’t really lend itself to plotting each individual entry in a plot.</p>
+<p>This scatter plots measures prices and odometers. We can see a clearly defined fall in price as the odometer increases. The graph, however, is quite chaotic with a plethora of outliers. A graph like this would look far better as a line plot, and the sheer amount of data in our dataset doesn’t really lend itself to plotting each individual entry in a plot.</p>
 </div>
 </div>
 <div class="section" id="violins">
@@ -237,20 +255,38 @@ Cars in poor/salvaged condition are most likely depreciated vehicles within the 
 <div class="section" id="heatmaps">
 <h3>Heatmaps<a class="headerlink" href="#heatmaps" title="Permalink to this headline">¶</a></h3>
 <hr class="docutils" />
-<div class="section" id="map-by-number-of-listings">
-<h4>Map by Number of Listings<a class="headerlink" href="#map-by-number-of-listings" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="heated-by-number-of-listings-1990-2005">
+<h4>Heated by Number of Listings - 1990-2005<a class="headerlink" href="#heated-by-number-of-listings-1990-2005" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="1990-2005.html">Interactive Version Here</a></p>
+<a class="reference external image-reference" href="img/1990-2005.png"><img alt="1990-2005 Map" src="_images/1990-2005.png" /></a>
+<p>This map depicts car listings when they were manufactured between 1990 and 2005. This map is quite crowded and while it tells us a lot about the distribution of car listings across the United States, the 1990-2005 filter isn’t very interesting.</p>
+</div>
+<div class="section" id="heated-by-number-of-listings-1990-1995">
+<h4>Heated by Number of Listings - 1990-1995<a class="headerlink" href="#heated-by-number-of-listings-1990-1995" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="1990-1995.html">Interactive Version Here</a></p>
+<a class="reference external image-reference" href="img/1990-1995.png"><img alt="1990-1995 Map" src="_images/1990-1995.png" /></a>
+<p>In an effort to narrow our results, lets change the filter to 1990-1995. This thins the map but the distribution is still the same. It does appear that there are substantially less listings in the western United States which could suggest that rural areas have newer cars, but numbers are thinned on the east side as well so it’s difficult to draw any valid conclusions.</p>
+</div>
+<div class="section" id="heated-by-number-of-listings-toyotas">
+<h4>Heated by Number of Listings - Toyotas<a class="headerlink" href="#heated-by-number-of-listings-toyotas" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="toyotas.html">Interactive Version Here</a></p>
+<a class="reference external image-reference" href="img/toyotas.png"><img alt="Toyotas Map" src="_images/toyotas.png" /></a>
+<p>Perhaps a totally different filter will reveal something interesting. This is a map of Toyotas only, and there’s actually something to see here. Toyotas are quite prevelant in urban areas but they’re nearly extinct in rural ones. We can contribute this to Toyotas reputation for building smaller, cost efficient cars which aren’t quite as desirable in rural areas.</p>
+</div>
+<div class="section" id="heated-by-number-of-listings-by-county">
+<h4>Heated by Number of Listings by County<a class="headerlink" href="#heated-by-number-of-listings-by-county" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/carsForSaleMap.png"><img alt="carsForSaleMap.png" src="_images/carsForSaleMap.png" /></a>
 <p><a class="reference external" href="https://plot.ly/~reesau01/2">Interactive Version Here</a></p>
 <p>This map displays the number of vehicles listed per county. Unsurprisingly, counties with high amounts of listings lie along the west/east coast, along with Flordia and metropolitan areas throughout the country (Denver, Chicago, Dallas, Minneapolis, etc.). The map also indicates that, with the exception of Denver and the west coast, the west side of the country is quite sparse when it comes to car listings. The east side of the United States contains far more sales.</p>
 </div>
-<div class="section" id="map-by-average-price">
-<h4>Map by Average Price<a class="headerlink" href="#map-by-average-price" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="heated-by-average-price-by-county">
+<h4>Heated by Average Price by County<a class="headerlink" href="#heated-by-average-price-by-county" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/priceByCountyMap.png"><img alt="priceByCountyMap.png" src="_images/priceByCountyMap.png" /></a>
 <p><a class="reference external" href="https://plot.ly/~reesau01/4">Interactive Version Here</a></p>
 <p>This map graphs the average price of vehicles by county across the United States. One striking observation is the increase in vehicle cost in rural areas. The prices of cars in states such as Idaho, North/South Dakota, and Wyoming, and rural parts of the midwest are far more expensive than those in the Eastern half of the nation. Cars on the East Coast also cost a faire amount less than those on the West Coast, with the coast of California boasting some pretty high prices.</p>
 </div>
-<div class="section" id="map-by-correlations">
-<h4>Map by Correlations<a class="headerlink" href="#map-by-correlations" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="heated-by-correlations">
+<h4>Heated by Correlations<a class="headerlink" href="#heated-by-correlations" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="/img/squareHeatmap.png"><img alt="squareHeatmap.png" src="_images/squareHeatmap.png" /></a>
 <p>All numeric variables’ correlations are compared in this graph. Most variables aren’t correlated at all, with the exception of moderate negative correlation between price and year, slight negative correlation between year and odometer, and slight positive correlation between year and price. We also see major negative correlation between weather and latitude which isn’t surprising at the slightest for those who are familiar with the planet we live on.</p>
 </div>
@@ -259,27 +295,38 @@ Cars in poor/salvaged condition are most likely depreciated vehicles within the 
 <h3>Quantile Tables<a class="headerlink" href="#quantile-tables" title="Permalink to this headline">¶</a></h3>
 <hr class="docutils" />
 <p>Lets say we’re searching for a used car, but we have no idea what a fair price would be. Enter quantile tables. These tables aren’t super eye-catching, but they’re very practical tools for determining what we should be paying for a given car. They take two numeric values, and in this example I’ll use odometer (miles the car has been driven) and price given that it’s a very practical combination when searching for a decent used car. The x axis (columns) will be grouped by a range of odometers determined by percentiles. 0-10th percentile may be 0-25000 miles driven, 11-20 could be 25000-50000, etc. Once these groups are determined we slice the our dataframe into 10 seperate frames according to which category they fall under (a car with 12500 miles will be in the first group while 45000 will be in the second). Finally, we find percentiles for the prices of cars within each group. This sounds somewhat complicated but the graphs are far easier to understand and resemble simple heatmaps.</p>
+<div class="section" id="grouped-by-odometer-means-of-price">
+<h4>Grouped by Odometer - Means of Price<a class="headerlink" href="#grouped-by-odometer-means-of-price" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/all.png"><img alt="all.png" src="_images/all.png" /></a>
 <p>Above is a graph featuring the entire dataframe, sorted by odometer with means of price. For example, lets say we wanted to purchase a car with no more than 70000 miles on it. We can check out the fourth column (46000-69295) to get an estimate on what a good price would be. The first row tells us that the top 10% of deals have an average price of $3207, which seems very affordable yet somewhat unrealistic. It would be wise to target a top 30% deal, which would mean that our car would cost less than $10048.</p>
+</div>
+<div class="section" id="grouped-by-odometer-means-of-price-fords">
+<h4>Grouped by Odometer - Means of Price - Fords<a class="headerlink" href="#grouped-by-odometer-means-of-price-fords" title="Permalink to this headline">¶</a></h4>
 <a class="reference external image-reference" href="img/fords.png"><img alt="fords.png" src="_images/fords.png" /></a>
 <p>The first graph is great but it’s very broad and if we’re looking to buy a specific car it’s not going to help us very much. Above is a graph plotting the same odometer/price, only this time the data is taken from Fords only. We can see that Ford’s are a little more expensive and have a tad more miles on them, but it’s still not descriptive enough for us data scientists.</p>
+<p>Grouped by Odometer - Means of Price - Fords in ‘Good’ Condition</p>
 <a class="reference external image-reference" href="img/goodFords.png"><img alt="goodFords.png" src="_images/goodFords.png" /></a>
-<p>As broke college students we are not looking for the greatest quality car, so this graph shows Fords with the ‘Good’ condition tag. Now we can see that a top 30% deal our ~70000 mile car shouldn’t cost any more than $6000, probably a little less. But still, a Ford in good condition isn’t as descriptive as we’d like as it still applies to a plethora of vehicles</p>
+<p>As broke college students we are not looking for the greatest quality car, so this graph shows Fords with the ‘Good’ condition tag. Now we can see that a top 30% deal our 70000 mile car shouldn’t cost any more than $6000, probably a little less. But still, a Ford in good condition isn’t as descriptive as we’d like as it still applies to a plethora of vehicles.</p>
+<p>Grouped by Odometer - Means of Price - Ford Midsize Sedans in ‘Good’ Condition</p>
 <a class="reference external image-reference" href="img/goodFordMidsizeSedan.png"><img alt="goodFordMidsizeSedan.png" src="_images/goodFordMidsizeSedan.png" /></a>
 <p>Finally, a chart specific enough to draw accurate conclusions from. This chart shows ‘Good’ mid-size sedans manufacturered by Ford. We now see that the car that we once thought we should try to buy for less than $10000 should be pursued for no more than $3000. Overall these quantile tables are an excellent way to determine an asking price for a used car, they’re easily automatable (as displayed in the Flask app) and also easy to build by hand.</p>
 </div>
 </div>
+</div>
 <div class="section" id="flask-app">
 <h2>Flask App<a class="headerlink" href="#flask-app" title="Permalink to this headline">¶</a></h2>
-</div>
 <hr class="docutils" />
+<p>To help us browse the data early on (and because it’s cool), we created a Flask app which allows users to create custom graphs displaying information relevant to them. This is the first step in our goal to create something that continues to be relevant beyond its creation. The app does not require any updates in its current form, all it needs to update automatically is a new dataset which can be created using a script that scrapes Craigslist.</p>
+</div>
 <div class="section" id="world-happiness-index">
 <h2>World Happiness Index<a class="headerlink" href="#world-happiness-index" title="Permalink to this headline">¶</a></h2>
-</div>
 <hr class="docutils" />
+<p>We had a lot of free time so we also explored the World Happiness Report dataset and discovered that it is extremely boring.</p>
+</div>
 <div class="section" id="what-s-next">
 <h2>What’s Next?<a class="headerlink" href="#what-s-next" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
+<p>Elon offered us $4.99 for the application and we took the deal.</p>
 </div>
 </div>
 
@@ -317,8 +364,21 @@ Cars in poor/salvaged condition are most likely depreciated vehicles within the 
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#basic-exploration">Basic Exploration</a></li>
-<li><a class="reference internal" href="#basic-information">Basic Information</a></li>
+<li><a class="reference internal" href="#basic-exploration">Basic Exploration</a><ul>
+<li><a class="reference internal" href="#basic-information">Basic Information</a><ul>
+<li><a class="reference internal" href="#use-5-categories-to-find-the-best-type-of-car-available-then-find-the-best-deal-on-a-used-car">USE 5 CATEGORIES TO FIND THE BEST TYPE OF CAR AVAILABLE - THEN FIND THE BEST DEAL ON A USED CAR</a></li>
+<li><a class="reference internal" href="#the-distribution-of-the-top-10-car-manufacturers">The Distribution of the Top 10 Car Manufacturers</a></li>
+<li><a class="reference internal" href="#the-distribution-of-the-top-10-states-to-buy-a-car-in">The Distribution of the Top 10 States to Buy a Car in</a></li>
+<li><a class="reference internal" href="#weather-condition-correlation">Weather-Condition Correlation</a></li>
+<li><a class="reference internal" href="#condition-distribution">Condition Distribution</a></li>
+<li><a class="reference internal" href="#size-distribution">Size Distribution</a></li>
+<li><a class="reference internal" href="#average-price-per-condition">Average Price per Condition</a></li>
+<li><a class="reference internal" href="#average-price-per-state">Average Price per State</a></li>
+<li><a class="reference internal" href="#average-price-per-manufacturer">Average Price per Manufacturer</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#big-questions">Big Questions</a></li>
 <li><a class="reference internal" href="#further-exploration">Further Exploration</a><ul>
 <li><a class="reference internal" href="#scatter-plots">Scatter Plots</a><ul>
@@ -335,12 +395,19 @@ Cars in poor/salvaged condition are most likely depreciated vehicles within the 
 </ul>
 </li>
 <li><a class="reference internal" href="#heatmaps">Heatmaps</a><ul>
-<li><a class="reference internal" href="#map-by-number-of-listings">Map by Number of Listings</a></li>
-<li><a class="reference internal" href="#map-by-average-price">Map by Average Price</a></li>
-<li><a class="reference internal" href="#map-by-correlations">Map by Correlations</a></li>
+<li><a class="reference internal" href="#heated-by-number-of-listings-1990-2005">Heated by Number of Listings - 1990-2005</a></li>
+<li><a class="reference internal" href="#heated-by-number-of-listings-1990-1995">Heated by Number of Listings - 1990-1995</a></li>
+<li><a class="reference internal" href="#heated-by-number-of-listings-toyotas">Heated by Number of Listings - Toyotas</a></li>
+<li><a class="reference internal" href="#heated-by-number-of-listings-by-county">Heated by Number of Listings by County</a></li>
+<li><a class="reference internal" href="#heated-by-average-price-by-county">Heated by Average Price by County</a></li>
+<li><a class="reference internal" href="#heated-by-correlations">Heated by Correlations</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#quantile-tables">Quantile Tables</a></li>
+<li><a class="reference internal" href="#quantile-tables">Quantile Tables</a><ul>
+<li><a class="reference internal" href="#grouped-by-odometer-means-of-price">Grouped by Odometer - Means of Price</a></li>
+<li><a class="reference internal" href="#grouped-by-odometer-means-of-price-fords">Grouped by Odometer - Means of Price - Fords</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#flask-app">Flask App</a></li>

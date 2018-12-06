@@ -268,14 +268,25 @@ Finally, a chart specific enough to draw accurate conclusions from. This chart s
 
 To help us browse the data early on (and because it's cool), we created a Flask app which allows users to create custom graphs displaying information relevant to them. This is the first step in our goal to create something that continues to be relevant beyond its creation. The app does not require any updates in its current form, all it needs to update automatically is a new dataset which can be created using a script that scrapes Craigslist.
 
-## World Happiness Index
----
-
-We had a lot of free time so we also explored the World Happiness Report dataset and discovered that it is extremely boring.
+Lets demo this in class: Color and Price Graphs.
 
 ## What's Next
 ---
 
-Elon offered us $4.99 for the application and we took the deal.
+With some optimization, the data can be scarped lively from Craigslist and our other secondary sources, and then getting fed into our Flask app(this needs optimization too). What we are hoping to reach is to have a platform that would help you not only visualize data but also analyze the data and get to the specific entries of each graph/table/map you are looking at.
 
-## Conclusion
+Imagine a platform, updated lively, that would allow you have the top 10%/15%/25% deals populating a Google Map of a specific State/County, and not that only, but to give your insights and statistics about the car manufacturer and its popularity, whether that top deal by milage is also a top deal by state or manufacturer.
+
+We have come to the conclusion that this data have the ability to give insights about all of that and to help you make the right decision in finding yourself a car. Among the questions that we think this data can help us answer are:
+* Whats a good deal on a used car?
+* What is the best deal on a used car?
+* Where should student go to purchase a car?
+* Which state has the best deals on new/used cars?
+* Where are the best deals on used cars in a specific state? (e.g Iowa)
+* Does car colour affect item frequency/sales price?
+* Does weather have an effect on conditions?
+* Does the weather have an effect on price?
+* What car year has the best condition?
+* Is price affected by manufacturer?
+* Does car size affect sales price?
+* Which state has the most expensive/least expensive cars, as well as the best condition of cars for sale?

@@ -90,20 +90,25 @@ Also, we were interested in seeing whether weather might have an influence on th
 
 Unfortunately, to collect specific data, such as floods at specific counties during specific dates, that would've required us to spend thousands of dollars on services that provide such information. Our only hope was to find a governmental data to help us with our data collection. We found [US Climate Data](https://www.usclimatedata.com/climate/alabama/united-states/3170) website that had historical weather data for each State. We decides that this might be a long shot but we got the average historical temperature for October and November for each state and incorporated that in our dataset.
 
+## Big Questions
+---
+
+# What is the Best Deal on a Used Car?
+
+To find the best possible deal on an used car, we must first take into consideration the general preferences of the average person looking to buy a vehicle. Therefore, in exploring the dataset, we will use 5 categories to find the best type of vehicles available for purchase, in order to find the best deals on a used car. The 5 categories include the vehicle's price, manufacturer, condition, state, and year. People who are less knowledgeable about vehicle specifications are more likely to explore these variables when buying a car. Most college students, like ourselves, will be looking for a used car with familiar manufacturers at a cheap price and in good condition. Other variables such as vehicle size will also be taken into consideration as customers will also need to consider what vehicle size is more suitable for them. 
+
+To reiterate, the five factors we are focusing on are:
+* Price
+* Manufacturer
+* Condition
+* State
+* Year
+
+We believe that finding a good car for any individual can take a tremendous amount of research, and that it usually can take a span of a month to two, and that was one of the reasons we wanted to do our analysis on the total amount of cars being sold on Craiglist over a month. We are assuming that 1.7 million cars would be what individuals looking to choose from in any given month, and our exploration is assuming that too.
+
 ## Basic Exploration
 ---
-
-### Basic Information
----
-We're dealing with 53 unique manufacturers, 6 unique conditions, and four car sizes plus 1834 counties and 51 states.
-#### USE 5 CATEGORIES TO FIND THE BEST TYPE OF CAR AVAILABLE - THEN FIND THE BEST DEAL ON A USED CAR
-
-* PRICE
-* MANUFACTURER
-* CONDITION
-* STATE
-* YEAR
----
+We're dealing with 53 unique manufacturers, 6 unique conditions, and 4 car sizes plus 1834 counties and 51 states.
 
 #### The Distribution of the Top 10 Car Manufacturers
 ![manufacturers-chart](img/manufacturers-chart.png)
@@ -112,7 +117,7 @@ This is the percentage distribution of the cars being manufactured by the top 10
 ![manufacturers-bar](img/manufacturers-bar.png)
 This is the count of the cars being manufactured by the top 10 manufacturers.
 
-Here we are looking to see the distribution of the top 10 manufacturing companies within the dataset. If you prefer Ford vehicles, Ford has the highest number of vehicles available for purchase, meaning you have a large number of vehicles to choose from. They are followed by Chevrolet and Toyota.  
+Here we are looking to see the distribution of the top 10 manufacturing companies within the dataset. If you prefer Ford vehicles, Ford has the highest number of vehicles available for purchase, meaning you have a large number of vehicles to choose from, and also worry not as the laws of demand and supply will probably be in your favor. Ford is followed by Chevrolet and Yoyota. BMW has the lowest number of cars available for sale, so persons who prefer this brand may have a lower chance of finding their ideal vehicle.
 
 #### The Distribution of the Top 10 States to Buy a Car in
 ![states-chart](img/states-chart.png)
@@ -121,15 +126,15 @@ This is the percentage distribution of the cars being sold in the top 10 states.
 ![states-bar](img/states-bar.png)
 This is the count of the cars being sold in the top 10 states.
 
-Here we are looking at the top 10 distribution of cars for sale by state. States with higher populations such as California and Florida will generally have more cars for purchase than states such as Wyoming.
+Here we are looking at the top 10 distribution of cars for sale by state. States such as California, with a population of approximately 34 million will generally have more vehicles available for purchase than other states. California has the highest number of vehicles for purchase with less than 160,000 vehicles for sale. States such as Washington will generally have less vehicles available for sale, with a population count of approximately 7 million. Washington has less than 60,000 vehicles available for purchase.
 
 #### Weather-Condition Correlation
 ![weather-vehicle-freq](img/weather-vehicle-freq.png)
-In this graph, we are looking to see the correlations with weather and vehicle conditions, as this can another factor to consider when looking for a vehicle.
+In this graph, we are looking to see the correlations with weather and vehicle conditions, as this is another factor to consider when looking for a vehicle. Individuals looking to buy cars in excellent condition should aim for states generally which are generally between 55-60 degrees in temperature. It should be noted that weather does not have a major effect on the condition of cars for sale, as cars with poor conditions are sold within the similar temperature range are cars in excellent condition.
 
 #### Condition Distribution
 ![condition-count-bar](img/condition-count-bar.png)
-This graph shows the number of vehicles within a specified condition. Cars in an excellent condition have the highest number with above 400,000 entries, followed by cars in good and like new condition.
+This graph shows the number of vehicles within a specific condition. Vehicles in an excellent condition have the highest number with above 400,000 entries, followed by cars in good and like new condition. Vehicles that are salvaged have the least number of entries with less 25,000 vehicles available for sale. Persons will generally not want to post severely depreciated vehicles for sale, as they are low in value.
 
 #### Size Distribution
 ![size-count-bar](img/size-count-bar.png)
@@ -137,20 +142,15 @@ For individuals concerned about car size, this graph shows the number of vehicle
 
 #### Average Price per Condition
 ![avgprice-condition-bar](img/avgprice-condition-bar.png)
-The graph above shows the mean price for each condition. New vehicles have an average sales price of above $20,000, followed by vehicles which are _like new_, with an average sales price of above $15,000. Persons looking at cheaper alternatives should look at vehicles with good to fair conditions, as they will on average have to spend less than $10,000 for a vehicle.
+The graph above shows the mean price for each condition. New vehicles have an average sales price of above $20,000, followed by vehicles which are _like new_, with an average sales price of above $15,000. Individuals looking for cheaper alternatives should look at vehicles with good to fair condition, as they will on average have to spend less than $10,000 for a vehicle. Vehicles with a fair or salvaged condition are most likely severely depreciated, suggesting their low average pricing of less than $5000.
 
 #### Average Price per State
 ![avgprice-state-bar](img/avgprice-state-bar.png)
-The graph above shows the mean prices for vehicles within each state. Persons looking for cheap vehicles, will be more likely to look at states such as District of Columbia and Delaware, as they both have a mean average of less than $7,500 for cars available for sale. Hawaii has the highest mean cost of vehicles with over $20,000.
+The graph above shows the mean prices for vehicles within each state. Persons looking for cheap vehicles, will be more likely to look at states such as District of Columbia and Delaware, as they both have a mean average of less than $7,500 for cars available for sale. Hawaii has the highest mean cost of vehicles with over $20,000 and there are several factors that could suggest why vehicles are so costly in Hawaii. Some reasons for these could be a higher cost of living in Hawaii or more luxury vehicles are available for purchase in Hawaii.
 
 #### Average Price per Manufacturer
 ![avgprice-manufacturer-bar](img/avgprice-manufacturer-bar.png)
-This graph shows the mean prices of vehicles for each manufacturer. Luxury vehicles such as ferrari, have a high average sales price of $80,000, followed by aston and aston-martin with average sales prices of less than $60,000. Persons looking for cheaper alternatives can look to brands such as mercury and volkswagen, who have average sales prices of less than $5,000.
-
-## Big Questions
----
-
-**TODO**
+This graph shows the mean prices of vehicles for each manufacturer. Luxury vehicles such as ferrari, have a high average sales price of $80,000, followed by aston and aston-martin with average sales prices of less than $60,000. Ferraris and other luxury vehicles are often expensive because they are often built with expensive and high-quality materials and are manufactured to tailor to individuals looking for a high quality vehicle. Persons looking for cheaper alternatives can look to brands such as mercury and volkswagen, who have average sales prices of less than $5,000. Vehicles within this range are more suited for persons with lower budgets, who are more concerned about going from Point A to Point B.
 
 ## Further Exploration
 ---
@@ -171,10 +171,8 @@ This scatter plots measures prices and odometers. We can see a clearly defined f
 
 ![yearConditionViolin.png](img/yearConditionViolin.png)
 
-The graph above displays the frequency distributions for cars in the dataset of a certain condition.
-For persons more concerned about the condition of their vehicles,they will be more likely to consider
-cars of a new condition, as they would have a more recent year of manufacturing(between 2015-2020).
-Cars in poor/salvaged condition are most likely depreciated vehicles within the timespan of years 2000-2005.
+The graph above displays the frequency distributions for cars in the dataset of a certain condition. For individuals more concerned about the condition of their vehicles, they will be more likely to consider
+cars of a new condition, as they would have a more recent year of manufacturing(between 2015-2018). Cars in poor/salvaged condition are most likely depreciated vehicles within the timespan of years 2000-2005. The graph clearly suggests that if you want a vehicle in a great condition, you should purchase a vehicle with a year of manufacturing closest to the most recent year.
 
 * The white dot represents the median
 * The thick gray bar in the center represents the interquartile range
@@ -187,7 +185,7 @@ Cars in poor/salvaged condition are most likely depreciated vehicles within the 
 
 ![conditionViolins.png](img/conditionViolins.png)
 
-These violin graphs measure the correlation between the price of vehicles and their seller-assigned conditions. We can see a pretty obvious (and unsurprising) hierarchy of new, like new, excellent, good, fair, and salvage. One surprise, however, is the similarity in price between fair and salvage vehicles. This suggests that vehicles deemed "fair" on Craigslist are actually in quite poor condition and worth almost as much as a parts-only car.
+This violion graph measure the correlation between the price of vehicles and their seller-assigned conditions. We can see a pretty obvious (and unsurprising) hierarchy of new, like new, excellent, good, fair, and salvage. One surprise, however, is the similarity in price between fair and salvage vehicles. This suggests that vehicles deemed "fair" on Craigslist are actually in quite poor condition and worth almost as much as a parts-only car.
 
 ### Line Graphs
 ---

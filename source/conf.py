@@ -35,8 +35,7 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.intersphinx',
               'sphinx.ext.todo',
               'sphinx.ext.githubpages',
-              'm2r',
-	      'recommonmark'
+              'm2r'
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,7 +54,7 @@ source_suffix = ['.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'Craiglist Cars Visualization & Analysis'
+project = 'Craiglist Visualization & Analysis'
 copyright = '2018, Ahmad Osman, Austin Reese, and Simon Parris'
 author = 'Ahmad Osman, Austin Reese, and Simon Parris'
 

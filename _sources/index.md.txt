@@ -159,7 +159,7 @@ This graph shows the mean prices of vehicles for each manufacturer. Luxury vehic
 
 ![scatter.png](img/scatter.png)
 
-This scatter plots measures prices and odometers. We can see a clearly defined fall in price as the odometer increases. The graph, however, is quite chaotic with a plethora of outliers. A graph like this would look far better as a line plot, and the sheer amount of data in our dataset doesn't really lend itself to plotting each individual entry in a plot.
+This scatter plots measures prices and odometers, while the shade of the dot represents its year. We can see a clearly defined fall in price as the odometer increases, and we can see that the year of manufacturing falls as the odometer increases/price decreases. The graph, however, is quite chaotic with a plethora of outliers. A graph like this would look far better as a line plot, and the sheer amount of data in our dataset doesn't really lend itself to plotting each individual entry in a plot.
 
 ### Violins
 ---

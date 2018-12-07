@@ -271,13 +271,39 @@ To help us browse the data early on (and because it's cool), we created a Flask 
 
 Lets demo this in class: Color and Price Graphs.
 
-Watch our demos with the links below!
+Watch our demos below!
 
-![1.webm](videos/1.webm)
-![2.webm](videos/2.webm)
-![3.webm](videos/3.webm)
-![4.webm](videos/4.webm)
-![5.webm](videos/5.webm)
+<video width="640" height="480" controls>
+  <source src="videos/1.webm" type="video/webm">
+</video>
+
+<video width="640" height="480" controls>
+  <source src="videos/2.webm" type="video/webm">
+</video>
+
+<video width="640" height="480" controls>
+  <source src="videos/3.webm" type="video/webm">
+</video>
+
+<video width="640" height="480" controls>
+  <source src="videos/4.webm" type="video/webm">
+</video>
+
+<video width="640" height="480" controls>
+  <source src="videos/5.webm" type="video/webm">
+</video>
+
+Links to the same demos in case the previews are not supported in your browser:
+
+[Demo #1](videos/1.webm)
+
+[Demo #2](videos/2.webm)
+
+[Demo #3](videos/3.webm)
+
+[Demo #4](videos/4.webm)
+
+[Demo #5](videos/5.webm)
 
 ## What's Next
 ---

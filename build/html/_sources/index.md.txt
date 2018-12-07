@@ -1,4 +1,5 @@
 # <center> Used Cars for Sale in the United States </center>
+<center>Ahmad Osman, Austin Reese, and Simon Parris</center>
 
 ## Our Motivation
 ---

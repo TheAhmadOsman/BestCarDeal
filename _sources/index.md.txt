@@ -1,6 +1,19 @@
 # <center> Used Cars for Sale in the United States </center>
 <center>Ahmad Osman, Austin Reese, and Simon Parris</center>
 
+## [Best Car Deal](https://github.com/Ahmad-Magdy-Osman/BestCarDeal/)
+---
+
+**Scraping, Visualizing, and Analyzing 1,700,000 Entries of Used Cars for Sale on Craigslist to Find The Best Car Deal**
+
+* [Findings, Analysis, and Visualizations](https://ahmadosman.com/BestCarDeal/)
+ 
+* [Scraper, Notebooks, and Interactive Web App](https://github.com/Ahmad-Magdy-Osman/BestCarDeal/)
+
+* [Dataset](http://knuth.luther.edu/~osmaah02/cars.csv)
+
+* [Daily Journal](https://ahmadosman.com/BestCarDealJournal/)
+
 ## Our Motivation
 ---
 

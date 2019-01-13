@@ -8,7 +8,7 @@
 
 * [Dataset](http://knuth.luther.edu/~osmaah02/cars.csv)
 
-* [Daily Personal Journal & Findings](https://ahmadosman.com/BestCarDealJournal/)
+* [Daily Journal](https://ahmadosman.com/BestCarDealJournal/)
 
 Buying a car is never an easy task, especially when buying a used one. So many different factors go into determining the price of a vehicle that it’s difficult to accurately predict what one should be paying. Aside from this there are some parts of the country where used car sales are few and far between and the prices are not so desirable. Using our scraped dataset of 1,700,000 entries of used car for sales from craigslist, we aimed to clarify some of these unknown variables and provide an easier experience for those searching for a car. Our goal was not to simply create static visualizations that compared cars from winter 2018, but instead we aim to create an application of sorts that allows users to continuously update the vehicles in their search.
 

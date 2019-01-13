@@ -1,0 +1,20 @@
+<!DOCTYPE html> {% extends "base.html" %}
+{% block content %}
+{{ form.csrv_token }}
+<form action="/pieCharts" method=POST>
+	<h2 class="form-login-heading text-center">Build Pie Chart</h2>
+	<div class="col-md-4"></div>
+	<div class="col-md-4 text-center>">
+		{{ wtf.form_field(form.cat) }}
+	</div>
+	<div class="col-md-4"></div>
+	<div class="col-md-12 text-center">
+		<input class="btn btn-primary" type=submit val=go>
+	</div>
+	<div class="col-md-12 text-center">
+		{% if img != None %}
+		<img class=fullsize src={{img}} alt="Error displaying graph">
+		{% endif %}
+	</div>
+</form>
+{% endblock %}

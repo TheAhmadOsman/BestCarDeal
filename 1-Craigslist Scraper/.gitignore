@@ -1,0 +1,8 @@
+*.xml
+*.db
+*.db-journal
+*.pyc
+*.pyo
+*.csv
+*.zip
+*.txt

@@ -1,0 +1,31 @@
+<!DOCTYPE html> {% extends "base.html" %}
+{% block content %}
+{% if msg != None %}
+<div class="alert alert-danger text-center" role="alert">
+  {{msg}}
+</div>
+{% endif %}
+<ul>
+	<li>
+		<a href="/barGraphs">Bar Graphs</a>
+	</li>
+	<li>
+		<a href="/lineGraphs">Line Graphs</a>
+	</li>
+	<li>
+		<a href="/pieCharts">Pie Charts</a>
+	</li>
+	<li>
+		<a href="/quantiles">Quantile Table</a>
+	</li>
+	<li>
+		<a href="/heatMaps">Heated Map</a>
+	</li>
+	<li>
+		<a href="/countMap">Sales by County</a>
+	</li>
+	<li>
+		<a href="/priceMap">Average Price by County</a>
+	</li>
+</ul>
+{% endblock %}

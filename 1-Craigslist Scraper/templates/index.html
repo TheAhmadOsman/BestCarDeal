@@ -1,0 +1,70 @@
+<!DOCTYPE html> {% extends "base.html" %}
+{% block content %}
+<form action="/" method=POST>
+	<h2 class="form-login-heading text-center">Search Craigslist</h2>
+	{{ form.csrf_token }}
+	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.city) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.state) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.make) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.vin) }} 
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.manufacturer) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.condition) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.cylinders) }} 
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.fuel) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.transmission) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.titleStatus) }} 
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.drive) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.size) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.vehicleType) }}
+  	</div> 
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.paintColor) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.priceStart) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.priceEnd) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.yearStart) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.yearEnd) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.odometerStart) }}
+  	</div>
+  	<div class="col-md-3 text-center">
+  		{{ wtf.form_field(form.odometerEnd) }}
+  	</div>
+  	<div class="col-md-12 text-center">
+		<input class="btn btn-primary" type=submit val=go>
+	</div>
+</form>
+{% endblock %}

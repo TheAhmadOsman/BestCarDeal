@@ -1,0 +1,50 @@
+Alabama: 61
+Kentucky: 50
+North Dakota: 38
+Alaska: 29
+Louisiana: 67
+Ohio: 49
+Arizona: 71
+Maine: 44
+Oklahoma: 57
+Arkansas: 59
+Maryland: 56
+Oregon: 50
+California: 59
+Massachusetts: 50
+Pennsylvania: 53
+Colorado: 45
+Michigan: 45
+Rhode Island: 49
+Connecticut: 51
+Minnesota: 43
+South Carolina: 60
+Delaware: 54
+Mississippi: 61
+South Dakota: 38
+Missouri: 52
+Tennessee: 59
+Florida: 65
+Montana: 40
+Texas: 67
+Georgia: 59
+Nebraska: 46
+Utah: 50
+Hawaii: 79
+Nevada: 46
+Vermont: 44
+Idaho: 47
+New Hampshire: 43
+Virginia: 55
+Illinois: 48
+New Jersey: 52
+Washington: 50
+Indiana: 48
+New Mexico: 45
+West Virginia: 52
+Iowa: 47
+New York: 53
+Wisconsin: 45
+Kansas: 51
+North Carolina: 56
+Wyoming: 41

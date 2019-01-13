@@ -1,0 +1,23 @@
+<!DOCTYPE html> {% extends "base.html" %}
+{% block content %}
+{{ form.csrv_token }}
+<form action="/barGraphs" method=POST>
+	<h2 class="form-login-heading text-center">Build Bar Graph</h2>
+	<div class="col-md-2 text-center>"></div>
+	<div class="col-md-4 text-center>">
+		{{ wtf.form_field(form.catDropdown) }}
+	</div>
+	<div class="col-md-4 text-center>">
+		{{ wtf.form_field(form.fltDropdown) }}
+	</div>
+	<div class="col-md-2 text-center>"></div>
+	<div class="col-md-12 text-center">
+		<input class="btn btn-primary" type=submit val=go>
+	</div>
+	<div class="col-md-12 text-center">
+		{% if img != None %}
+		<img class=fullsize src={{img}} alt="Error displaying graph">
+		{% endif %}
+	</div>
+</form>
+{% endblock %}

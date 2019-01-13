@@ -1,0 +1,6 @@
+*.zip
+*.csv
+static/*.png
+__pycache__/*
+secretKey.txt
+.~lock.*

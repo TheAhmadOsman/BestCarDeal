@@ -1,0 +1,28 @@
+<!DOCTYPE html> {% extends "base.html" %}
+{% block content %}
+{{ form.csrv_token }}
+{% if firstDrop == True %}
+<form action="/renderMap" method=POST>
+{% else %}
+<form action="/heatMaps" method=POST>
+{% endif %}
+	<h2 class="form-login-heading text-center">Build Heat Map</h2>
+	<div class="col-md-12">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center">
+			{{ wtf.form_field(form.cat) }}
+		</div>
+	</div>	
+	{% if firstDrop == True %}
+	<div class="col-md-12">
+		<div class="col-md-4"></div>
+		<div class="col-md-4 text-center">
+			{{ wtf.form_field(form.var) }}
+		</div>
+	</div>
+	{% endif %}
+	<div class="col-md-12 text-center">
+		<input class="btn btn-primary" type=submit val=go>
+	</div>
+</form>
+{% endblock %}

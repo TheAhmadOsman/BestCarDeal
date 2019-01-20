@@ -4,6 +4,8 @@
 
 Full descriptive explanation and analysis of the project can be found at [https://ahmadosman.com/BestCarDeal/](https://ahmadosman.com/BestCarDeal/)
 
+Projects, code, and notebooks used during this project can be found at [https://github.com/Ahmad-Magdy-Osman/BestCarDeal](https://github.com/Ahmad-Magdy-Osman/BestCarDeal)
+
 * [Findings, Analysis, and Visualizations](https://ahmadosman.com/BestCarDeal/)
  
 * [Scraper, Notebooks, and Interactive Web App](https://github.com/Ahmad-Magdy-Osman/BestCarDeal/)

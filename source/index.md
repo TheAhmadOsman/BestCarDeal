@@ -6,6 +6,8 @@
 
 **Scraping, Visualizing, and Analyzing 1,700,000 Entries of Used Cars for Sale on Craigslist to Find The Best Car Deal**
 
+Projects, code, and notebooks used during this project can be found at [https://github.com/Ahmad-Magdy-Osman/BestCarDeal](https://github.com/Ahmad-Magdy-Osman/BestCarDeal)
+
 * [Findings, Analysis, and Visualizations](https://ahmadosman.com/BestCarDeal/)
  
 * [Scraper, Notebooks, and Interactive Web App](https://github.com/Ahmad-Magdy-Osman/BestCarDeal/)
